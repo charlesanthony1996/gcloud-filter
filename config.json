@@ -1,0 +1,74 @@
+{
+    "models": {
+        "BERT": {
+            "model_path": "bert-base-uncased",
+            "threshold": 0.3,
+            "preprocess": {
+                "lower_case": true,
+                "remove_punctuation": true
+            }
+        },
+        "TwitterRoberta": {
+            "model_path": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+            "threshold": 0.4,
+            "preprocess": {
+                "lower_case": false,
+                "remove_punctuation": false
+            }
+        },
+        "RobertaBase": {
+            "model_path": "roberta-base",
+            "threshold": 0.3,
+            "preprocess": {
+                "lower_case": true,
+                "remove_punctuation": true
+            }
+        },
+        "XLNet": {
+            "model_path": "xlnet-base-cased",
+            "threshold": 0.3,
+            "preprocess": {
+                "lower_case": true,
+                "remove_punctuation": true
+            }
+        },
+        "TwitterRobertaHate": {
+            "model_path": "cardiffnlp/twitter-roberta-base-hate-latest",
+            "threshold": 0.7,
+            "preprocess": {
+                "lower_case": false,
+                "remove_punctuation": false
+            }
+        },
+        "DistilBertBaseFinetuned": {
+            "model_path": "distilbert-base-uncased-finetuned-sst-2-english",
+            "threshold": 0.4,
+            "preprocess": {
+                "lower_case": false,
+                "remove_punctuation": false
+            }
+        },
+        
+        "Hate-speech-CNERG/english-abusive-MuRIL": {
+            "model_path": "Hate-speech-CNERG/english-abusive-MuRIL",
+            "threshold": 0.3,
+            "preprocess": {
+                "lower_case": false,
+                "remove_punctuation": false
+            }
+        },
+
+        "deepset/bert-base-german-cased-hatespeech-GermEval18Coarse": {
+            "model_path": "deepset/bert-base-german-cased-hatespeech-GermEval18Coarse",
+            "threshold": 0.3,
+            "preprocess": {
+                "lower_case": false,
+                "remove_punctuation": false
+            }
+        }
+
+        
+    },
+    "active_model": "Hate-speech-CNERG/english-abusive-MuRIL",
+    "active_model2": "deepset/bert-base-german-cased-hatespeech-GermEval18Coarse"
+}
