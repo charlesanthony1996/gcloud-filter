@@ -93,6 +93,20 @@ def filter_text():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route("/api/test_db_communication", methods=["GET"])
+def test_db_communication():
+    try:
+        db_service_url = 'http://gcloud-server-db-met2pwr7xq-uc.a.run.app/api/test'
+        payload = {"test_message": "Hello from Text Processor Service"}
+        response = requests.post(db_service_url, json=payload)
+        if response.status_code == 200:
+            return jsonify({"message": "Successfully communicated with DB service", "db_response": response.json()})
+        else:
+            return jsonify({"error": "Failed to communicate with DB service"}), response.status_code
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 if __name__ == "__main__":
     # print("Before!!")
     # current_filter = config["active_model"]
