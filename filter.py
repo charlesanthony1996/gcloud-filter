@@ -65,6 +65,10 @@ def direct_test(sentence):
         filtered, processed_text, score = german_processor.process_text(sentence)
         print(f"Sentence: '{sentence}'\nFiltered: {filtered}\nNegativity Score: {score}\n")
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Filter Service Running"})
+
 @app.route("/api/test", methods=["POST"])
 def filter_text():
     try:
@@ -96,7 +100,7 @@ def filter_text():
 @app.route("/api/test_db_communication", methods=["GET"])
 def test_db_communication():
     try:
-        db_service_url = 'http://gcloud-server-db-met2pwr7xq-uc.a.run.app:5001/api/test'
+        db_service_url = 'https://gcloud-server-db-met2pwr7xq-uc.a.run.app:5001/api/test'
         payload = {"test_message": "Hello from Text Processor Service"}
         response = requests.post(db_service_url, json=payload)
         if response.status_code == 200:
