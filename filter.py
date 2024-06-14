@@ -121,14 +121,14 @@ if __name__ == "__main__":
     # print("After")
 
 
-    # direct_test("you are a very horrible person")
-    # direct_test("""
-    #             Dwight Howard ist eine verdeckte Schwuchtel. 
-    #             Dieser Typ wurde vor der Kamera erwischt und Isiah Canaan Penis streichelte, 
-    #             als Sie fÃ¼r die Rockets spielten.Dwights Karriere ist vorbei, 
-    #             weil er weicher als Marmelade ist und keinen Strandball in einen 
-    #             Ozean schieÃŸen konnte. Hasse dich bitch!
-    #             """)
+    direct_test("you are a very horrible person")
+    direct_test("""
+                Dwight Howard ist eine verdeckte Schwuchtel. 
+                Dieser Typ wurde vor der Kamera erwischt und Isiah Canaan Penis streichelte, 
+                als Sie fÃ¼r die Rockets spielten.Dwights Karriere ist vorbei, 
+                weil er weicher als Marmelade ist und keinen Strandball in einen 
+                Ozean schieÃŸen konnte. Hasse dich bitch!
+                """)
 
     port = int(os.environ.get("PORT", 8080))
     app.run(debug=True, host='0.0.0.0', port=port)
